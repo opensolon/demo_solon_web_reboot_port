@@ -34,7 +34,7 @@ public class DemoController {
     @Mapping("/reboot")
     public String reboot(int port) throws Exception {
         if (port > 4000) {
-            RunUtil.delay(() -> rebootDo(port), 100);
+            RunUtil.delay(() -> rebootDo(port), 50);//延后执行
 
             String url = "http://localhost:" + port + "/hello";
             return "开始切换端口...0.1秒后打开新地址：<a href='" + url + "'>" + url + "</a>";
