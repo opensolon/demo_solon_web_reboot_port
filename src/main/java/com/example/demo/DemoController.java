@@ -27,7 +27,7 @@ public class DemoController {
     public String hello(@Param(defaultValue = "world") String name) {
         HttpServerProps props = new HttpServerProps();
         String url = "/reboot?port=" + (props.getPort() + 1);
-        return String.format("Hello %s!", name) + " 你可能再改个端口：<a href='" + url + "'>" + url + "</a>";
+        return String.format("Hello %s!", name) + " 你可能要改个端口？：<a href='" + url + "'>" + url + "</a>";
     }
 
     @Produces(MimeType.TEXT_HTML_UTF8_VALUE)
